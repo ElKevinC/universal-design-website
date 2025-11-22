@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Single+Ink:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Single+Ink:wght@100..900&family=Momo+Trust+Display&family=Roboto:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Single+Ink:wght@100..900&family=Momo+Trust+Display&family=Roboto:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap');
+
+*,
+*:before,
+*:after{
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: rgb(232, 232, 232);
+    font-family:"Zalando Sans SemiExpanded", sans-serif;
+    font-size: 15px;
+}
+
+h1,
+h2,
+h3{
+    font-family:"Momo Trust Display",serif;
+    font-weight: normal;
+    padding: .2em 0;
+}
+
+p{
+    margin: 1.8em 0;
+    line-height: 1.8em;
+}
+
+h2{font-size: 1.25em;}
+
+header,
+nav,
+main,
+aside,
+footer{
+    padding:1.5em;
+    border:1px black solid;
+}
+
+header,
+footer{
+    text-align: center;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgb(72, 252, 255);
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns:
+    1fr    ;
+    grid-template-areas:
+    "heady"
+    "navvy"
+    "mainy"
+    "footy"
+}
+
+header{grid-area:heady;background:#5C29F0}
+nav{grid-area:navvy;background:#D6D8F4}
+main{grid-area:mainy;background:#9D29F0; max-height:100%;}
+footer{grid-area:footy;background:#2936F0}
+
+/* cool thing, you can make grids within grids*/
+main {
+    display: grid;
+    gap: 1.5em;
+
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "p1"
+        "p2"
+        "p3";
+}
+
+#p1 { grid-area: p1; background: white; border: 1px solid black; padding: 1.5em; }
+#p2 { grid-area: p2; background: white; border: 1px solid black; padding: 1.5em; }
+#p3 { grid-area: p3; background: white; border: 1px solid black; padding: 1.5em; }
+
+nav ul{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+nav ul li{
+    list-style: none
+}
+
+nav ul{
+    flex-flow:column nowrap;
+    text-align: center;
+}
+nav ul li a{
+    display:block;
+    padding:10px 5px;
+    margin: 5px;
+    border: 1px black solid;
+    background:white;
+}
+
+@media screen and (min-width:900px) {
+    
+     nav ul {
+        flex-flow: row nowrap; /* horizontal */
+        justify-content: space-around;
+    }
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "heady heady"
+            "navvy navvy"
+            "mainy mainy"
+            "footy footy";
+    }
+
+    /* main becomes 3 columns */
+    main {
+        grid-template-columns: 
+        repeat(3, 1fr);
+        grid-template-areas:
+         "p1 p2 p3";
+    }
+}
+
+/* dropdown*/
+ .sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.skip-link {
+  background: red;
+  color: #fff;
+  font-weight: 700;
+  padding: 4px;
+  position: absolute;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(-13%);
+}
+
+.skip-link {
+  /* Same as  before */
+  transition: transform 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+}
+.dropdown__title {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+}
+nav {
+  background-color: purple;
+  padding: 0 1rem;
+  position: sticky;
+  top: 0;
+  display: grid;
+  place-items: center;
+}
+nav > ul {
+  grid-auto-flow: column;
+}
+nav > ul > li {
+  margin: 0 0.5rem;
+}
+nav > ul > li a, nav > ul > li .dropdown__title {
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  font-size: 1.125rem;
+}
+nav > ul > li a:focus, nav > ul > li .dropdown__title:focus {
+  outline: none;
+}
+nav > ul > li > a, nav > ul > li .dropdown__title {
+  padding: 1rem 0.5rem;
+  border-top: 3px solid transparent;
+  transition: 280ms all 120ms ease-out;
+}
+nav > ul > li > a:hover, nav > ul > li .dropdown__title:hover, nav > ul > li > a:focus, nav > ul > li .dropdown__title:focus {
+  border-top-color: pink;
+  color: pink;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+nav ul li {
+  padding: 0;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown .dropdown__title {
+  display: inline-flex;
+  align-items: center;
+}
+.dropdown .dropdown__title:after {
+  content: "";
+  border: 0.35rem solid transparent;
+  border-top-color: rgba(255, 255, 255, 0.45);
+  margin-left: 0.25em;
+  transform: translateY(0.15em);
+}
+.dropdown .dropdown__menu {
+  position: absolute;
+  min-width: 15ch;
+  left: 50%;
+  top: calc(100% - 0.25rem);
+  transition: 280ms all 120ms ease-out;
+  transform: rotateX(-90deg) translateX(-50%);
+  transform-origin: top center;
+  visibility: hidden;
+  opacity: 0.3;
+  padding: 0.5em 0;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0.15em 0.25em rgba(0, 0, 0, 0.25);
+}
+.dropdown .dropdown__menu a {
+  color: #47246b;
+  display: block;
+  padding: 0.5em;
+  opacity: 0;
+  transition: 280ms all 120ms ease-out;
+}
+.dropdown .dropdown__menu a:hover {
+  background-color: rgba(102, 51, 153, 0.15);
+}
+.dropdown .dropdown__menu a:focus {
+  outline: none;
+  background-color: rgba(102, 51, 153, 0.25);
+}
+.dropdown:after {
+  content: "";
+  border: 0.5rem solid transparent;
+  border-bottom-color: #fff;
+  position: absolute;
+  top: calc(100% - 1.25rem);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 280ms all 120ms ease-out;
+  opacity: 0;
+  will-change: opacity;
+}
+.dropdown:hover .dropdown__title, .dropdown:focus-within .dropdown__title {
+  border-top-color: pink;
+}
+.dropdown:hover .dropdown__menu, .dropdown:focus-within .dropdown__menu {
+  opacity: 1;
+  transform: rotateX(0) translateX(-50%);
+  visibility: visible;
+}
+.dropdown:hover .dropdown__menu a, .dropdown:focus-within .dropdown__menu a {
+  opacity: 1;
+}
+.dropdown:hover:after, .dropdown:focus-within:after {
+  opacity: 1;
+}
