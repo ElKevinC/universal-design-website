@@ -1,0 +1,64 @@
+<!-- CSS Grid, cool useful thing. Needs 3 things. Fluid Grid, and 2 media query. And it really needs the viewport already given, so never take it off. -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="index.css"rel="stylesheet">
+ </head>
+ <body>
+    <div class ="container">
+    <!-- <header>h1 -->
+        <header>
+            <h1>Universal Design</h1>
+        </header>
+
+        
+<nav id="DropDown-Navigation">
+    <h2 class="sr-only">Main Navigation</h2>
+    <ul>
+ 
+        <li class="dropdown">
+            <button type="button" class="dropdown__title" aria-expanded="false" aria-controls="nav-main">
+                Sections
+            </button>
+            <ul class="dropdown__menu" id="nav-main">
+                <li><a href="#Why">Why</a></li>
+                <li><a href="#What">What</a></li>
+                <li><a href="#How">How</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <button type="button" class="dropdown__title" aria-expanded="false" aria-controls="nav-extra">
+                Extra Links
+            </button>
+            <ul class="dropdown__menu" id="nav-extra">
+                <li><a href="#">Extra Link 1</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+
+        <!-- main>section>h2+p -->
+        <main>
+            <section id ="Why" class = "content box">
+                <h2>Why</h2>
+                <p>general info to what this page will be about, with a link box for the page</p>
+            </section>
+            <section id ="What" class = "content box">
+                <h2>What</h2>
+                <p>general info to what this page will be about, with a link box for the page</p>
+            </section>
+            <section id ="How"class = "content box">
+                <h2>How</h2>
+                <p>general info to what this page will be about, with a link box for the page</p>
+            </section>
+            </main>
+        
+        <footer><small>&copy; 2025</small></footer>
+    </div> <!--div container-->
+ </body>
+ </html>
