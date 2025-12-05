@@ -8,10 +8,11 @@
     <link href="index.css"rel="stylesheet">
  </head>
  <body>
+    <a class = "skip-link" href = "#main">Skip to Main Content</a>
     <div class ="container">
     <!-- <header>h1 -->
         <header>
-            <h1>Universal Design</h1>
+            <h1>What of Universal Design</h1>
         </header>
 
         
@@ -24,18 +25,22 @@
                 Sections
             </button>
             <ul class="dropdown__menu" id="nav-main">
-                <li><a href="#Why">Why</a></li>
-                <li><a href="#What">What</a></li>
-                <li><a href="#How">How</a></li>
+
+                <li><a href="#what">What</a></li>
+                <li><a href="#what-second-part">What Second Part</a></li>
+                <li><a href="#what-image">Example</a></li>
+  
             </ul>
         </li>
 
         <li class="dropdown">
             <button type="button" class="dropdown__title" aria-expanded="false" aria-controls="nav-extra">
-                Extra Links
+                Direct Links
             </button>
             <ul class="dropdown__menu" id="nav-extra">
-                <li><a href="#">Extra Link 1</a></li>
+                <li><a href="index.html">Main Menu</a></li>
+                <li><a href="how.html">How Page</a></li>
+                <li><a href="why.html">Why Page</a></li>
             </ul>
         </li>
     </ul>
@@ -43,15 +48,31 @@
 
 
         <!-- main>section>h2+p -->
-        <main id = "main">
-
+<main id = "main">
             <section id ="what" class = "content box">
                 <h2 id = "what-heading">What</h2>
-                <p>general info to what this page will be about, with a link box for the page</p>
-                <p>For more info, access this page.<a href = "what.html"> The What Page</a></p> <!--anchor link-->
+                 <p>
+                    We need to understand the theory and principles of these ideas, where responsive design, clear practices are to be expected. When looking at semantic HTML practices, we have to understand many elements such as header, main, section, article, and footer, which ensure structural understanding if properly labeled, headed and described. These will provide meaningful navigation of a page. We also have to focus on multiple layout design strategies that could allow content to adapt to different devices, such as Grid and Flexbox. We cannot ensure accessibility if we forget to adapt smaller screens in our current day. With all these principles, we have to ensure that everyone's digital experiences are inclusive, accessible and usable.
+                </p>
+                
             </section>
+            <section id="what-second-part" class="content box">
+                <h2 id="what-second-part-heading">What Continued</h2>
 
-            </main>
+                <p>
+                    Accessibility evaluation tools, identify barriers like contrast, labels, or inaccessible tables and forms, helping designers make improvements. Also, we cannot talk about these ideas without talking about Norman's design principle: visibility, feedback, constraints, and affordances. We need clear visual cues and consistent layouts to allow users to understand the screen more effectively. Accessibility evaluation tools, such as WAVE or Axe, identify barriers like low contrast, missing labels, or inaccessible tables and forms, helping designers make evidence-based improvements
+                </p>
+
+            </section>
+            <section id ="what-image" class = "content box">
+            <h2 id = "why-image-heading">EXAMPLE</h2>
+              
+            <p>
+                The following is an example of how normans principles work.
+            </p>
+            <img src = "example.jpeg" alt = "example of use of Normans principles on calculator."/>
+            </section>
+        </main>       
         
         <footer><small>&copy; 2025</small></footer>
     </div> <!--div container-->

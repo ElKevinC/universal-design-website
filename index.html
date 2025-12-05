@@ -4,10 +4,12 @@
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Universal Design</title>
     <link href="index.css"rel="stylesheet">
  </head>
+ <!-- <header>h1 -->
  <body>
+    <a class = "skip-link" href = "#main">Skip to Main Content</a>
     <div class ="container">
     <!-- <header>h1 -->
         <header>
@@ -24,18 +26,20 @@
                 Sections
             </button>
             <ul class="dropdown__menu" id="nav-main">
-                <li><a href="#Why">Why</a></li>
-                <li><a href="#What">What</a></li>
-                <li><a href="#How">How</a></li>
+                <li><a href="#why">Why</a></li>
+                <li><a href="#what">What</a></li>
+                <li><a href="#how">How</a></li>
             </ul>
         </li>
 
         <li class="dropdown">
             <button type="button" class="dropdown__title" aria-expanded="false" aria-controls="nav-extra">
-                Extra Links
+                Direct Links
             </button>
             <ul class="dropdown__menu" id="nav-extra">
-                <li><a href="#">Extra Link 1</a></li>
+                <li><a href="why.html">Why Page</a></li>
+                <li><a href="what.html">What Page</a></li>
+                <li><a href="how.html">How Page</a></li>
             </ul>
         </li>
     </ul>
@@ -46,22 +50,24 @@
         <main id = "main">
             <section id ="why" class = "content box">
                 <h2 id = "why-heading">Why</h2>
-                <p>general info to what this page will be about, with a link box for the page</p>
-                <p>For more info, access this page.<a href = "why.html"> The Why Page</a></p> <!--anchor link-->
+                <p>The goal is to explain WHY we need to be fully concious of of accesibility and universal design. We need to emphazize how individuals may hbe affected by technologies that wont adapt to their needs. </p>
+                <p>For more info, access this page.<a href="why.html">The Why Page</a></p> <!--anchor link-->
             </section>
             <section id ="what" class = "content box">
                 <h2 id = "what-heading">What</h2>
-                <p>general info to what this page will be about, with a link box for the page</p>
-                <p>For more info, access this page.<a href = "what.html"> The What Page</a></p> <!--anchor link-->
+                <p>We need to undertand WHAT is to be needed within these practices, defining accesibility, its fundamentals and applications.</p>
+                <p>For more info, access this page.<a href="what.html">The What Page</a></p> <!--anchor link-->
             </section>
             <section id ="how"class = "content box">
                 <h2 id = "how-heading">How</h2>
-                <p>general info to what this page will be about, with a link box for the page</p>
-                <p>For more info, access this page.<a href = "how.html"> The How Page</a></p> <!--anchor link-->
+                <p>To provide accesibility will require us to know HOW we could apply these changes, being practical adn accesible.</p>
+                <p>For more info, access this page.<a href="how.html">The How Page</a></p> <!--anchor link-->
             </section>
-            </main>
+        </main>
         
         <footer><small>&copy; 2025</small></footer>
     </div> <!--div container-->
+
+
  </body>
  </html>

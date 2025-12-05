@@ -77,6 +77,12 @@ main {
         "p2"
         "p3";
 }
+/* the following should fix the blue links with bad background constrast*/
+main a{
+  color:#000;
+  font-weight:bold;
+  text-decoration:underline;
+}
 
 #p1 { grid-area: p1; background: white; border: 1px solid black; padding: 1.5em; }
 #p2 { grid-area: p2; background: white; border: 1px solid black; padding: 1.5em; }
@@ -102,6 +108,14 @@ nav ul li a{
     margin: 5px;
     border: 1px black solid;
     background:white;
+}
+
+/*for image autosize issue*/
+section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto; 
 }
 
 @media screen and (min-width:900px) {

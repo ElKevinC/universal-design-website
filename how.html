@@ -8,10 +8,11 @@
     <link href="index.css"rel="stylesheet">
  </head>
  <body>
+    <a class = "skip-link" href = "#main">Skip to Main Content</a>
     <div class ="container">
     <!-- <header>h1 -->
         <header>
-            <h1>Universal Design</h1>
+            <h1>How Universal Design</h1>
         </header>
 
         
@@ -24,18 +25,20 @@
                 Sections
             </button>
             <ul class="dropdown__menu" id="nav-main">
-                <li><a href="#Why">Why</a></li>
-                <li><a href="#What">What</a></li>
-                <li><a href="#How">How</a></li>
+                <li><a href="#how">How</a></li>
+                <li><a href="#how-second-part">Tools</a></li>
+                <li><a href="#how-image">Code Example</a></li>
             </ul>
         </li>
 
         <li class="dropdown">
             <button type="button" class="dropdown__title" aria-expanded="false" aria-controls="nav-extra">
-                Extra Links
+                Direct Links
             </button>
             <ul class="dropdown__menu" id="nav-extra">
-                <li><a href="#">Extra Link 1</a></li>
+                <li><a href="index.html">Main Menu</a></li>
+                <li><a href="what.html">What Page</a></li>
+                <li><a href="why.html">Why Page</a></li>
             </ul>
         </li>
     </ul>
@@ -46,11 +49,30 @@
         <main id = "main">
             <section id ="how"class = "content box">
                 <h2 id = "how-heading">How</h2>
-                <p>general info to what this page will be about, with a link box for the page</p>
-                <p>For more info, access this page.<a href = "how.html"> The How Page</a></p> <!--anchor link-->
+                <p>Now we have to understand some of the practical uses of these new structural semantic practices. We have to ensure the use of these tools to become a standard. We should pay attention to how we use these and how each tool will affect your goal on your page. These accessibility tools will ensure inclusive and adaptable structures, where everyone will benefit regardless. </p>
+                <p>The following are some of the practices to be used: </p>
             </section>
-            </main>
-        
+            
+            <section id ="how-second-part"class = "content box">
+                <h2 id = "how-second-part-heading">TOOLS</h2>
+                
+                <p>Forms: Forms are great for data recollection, we need to assure input is accessible. Use fieldset and related fields, such labe on all inputs. By having clear instructions and descriptions within the page, like placeholder, we ensure form understanding.
+                Tables: Screen readers can interpret tables pretty well, allowing users blind to understand data. Use a table with tbody, th, thead, and caption for clarity.
+                Dropdowns & Tabbed Browsing: Most important, as by Implementing ARIA (aria-expanded, aria-controls) we can actually implement nice flow changes. Also, it is important to understand  toggle dropdowns and navigate tabs via keyboard or screen reader.
+                Design: Use flexbox and Grid for fluid and accessible layouts that will adapt to the needs of users. We are in an era where mobile layouts are to be prioritized. 
+                Screen Readers/Text-to-Speech: Human-like text-to-speech will improve comprehension, and give a natural feeling to our understanding in general. Headings, tags of sorts, id’s, and meaningful link descriptions will support efficient navigation.
+                </p>
+                
+            </section>
+            <section id ="how-image" class = "content box">
+            <h2 id = "how-image-heading">EXAMPLE</h2>
+              
+            <p>
+                To give it a start, the following is a snippet of a basic starting template you can start with for your navigation, dropdown menu and even skip navigation. 
+            </p>
+            <img src = "semantic.jpg" alt = "example of use  navigation, skip navigation and dropdown menu."/>
+            </section>
+        </main>
         <footer><small>&copy; 2025</small></footer>
     </div> <!--div container-->
  </body>
