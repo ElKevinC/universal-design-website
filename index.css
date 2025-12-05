@@ -292,3 +292,10 @@ nav ul li {
 .dropdown:hover:after, .dropdown:focus-within:after {
   opacity: 1;
 }
+
+/*table*/
+table, th, td{
+  border: 2px solid black;
+  border-collapse:collapse;
+}
+
