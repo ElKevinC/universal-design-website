@@ -64,7 +64,7 @@ footer{
 header{grid-area:heady;background:#5C29F0}
 nav{grid-area:navvy;background:#D6D8F4}
 main{grid-area:mainy;background:#c16bff; max-height:100%;}
-footer{grid-area:footy;background:#2936F0}
+footer{grid-area:footy;background:#6973fe}
 
 /* cool thing, you can make grids within grids*/
 main {
